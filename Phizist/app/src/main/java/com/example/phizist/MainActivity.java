@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         lfac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,lorentzPractice.class);
+                Intent intent = new Intent(MainActivity.this,lorentz_fac.class);
                 startActivity(intent);
             }
         });

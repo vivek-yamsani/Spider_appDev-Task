@@ -1,0 +1,18 @@
+com/example/phizist/lorentz_check.java
+ com.example.phizist.lorentz_check
+ com.example.phizist.lorentz_check$1
+com/example/phizist/lorentz_fac.java
+ com.example.phizist.lorentz_fac
+ com.example.phizist.lorentz_fac$1
+ com.example.phizist.lorentz_fac$2
+com/example/phizist/lorentzPractice.java
+ com.example.phizist.lorentzPractice
+com/example/phizist/BuildConfig.java
+ com.example.phizist.BuildConfig
+com/example/phizist/spi_factor.java
+ com.example.phizist.spi_factor
+ com.example.phizist.spi_factor$1
+com/example/phizist/MainActivity.java
+ com.example.phizist.MainActivity
+ com.example.phizist.MainActivity$1
+ com.example.phizist.MainActivity$2

@@ -29,9 +29,9 @@ public class spi_factor extends AppCompatActivity {
         SimpleDateFormat simpleDateFormat3 = new SimpleDateFormat("ss");
 
         int hr = Integer.parseInt(simpleDateFormat.format(calendar.getTime()));
-
+        int x = hr;
         int min = Integer.parseInt(simpleDateFormat2.format(calendar.getTime()));
-
+        int y = min;
         int sec = Integer.parseInt(simpleDateFormat3.format(calendar.getTime()));
         TextView textView = findViewById(R.id.spi);
         hr = fac(hr);
@@ -39,7 +39,40 @@ public class spi_factor extends AppCompatActivity {
 
         float spi = min + sec;
         spi = hr/spi;
-        textView.setText("Spi Factor is  "+spi);
+        if(x>9) {
+            if(y>9){
+                if(sec>9){
+                    textView.setText("Now the time is\n" + x + " : " + y + " : " + sec + "\n&\nSpi Factor is\n" + spi);
+                }
+                else{
+                    textView.setText("Now the time is\n"+x+" : "+y+" : 0"+sec +"\n&\nSpi Factor is\n"+spi);
+                }
+            }
+            else{
+                if(sec>9){
+                    textView.setText("Now the time is\n" + x + " : 0" + y + " : " + sec + "\n&\nSpi Factor is\n" + spi);
+                }
+                else{
+                    textView.setText("Now the time is\n"+x+" : 0"+y+" : 0"+sec +"\n&\nSpi Factor is\n"+spi);
+                }
+            }
+        }
+        else {
+            if (y > 9) {
+                if (sec > 9) {
+                    textView.setText("Now the time is\n0" + x + " : " + y + " : " + sec + "\n&\nSpi Factor is\n" + spi);
+                } else {
+                    textView.setText("Now the time is\n0" + x + " : " + y + " : 0" + sec + "\n&\nSpi Factor is\n" + spi);
+                }
+            }
+            else {
+                if (sec > 9) {
+                    textView.setText("Now the time is\n0" + x + " : 0" + y + " : " + sec + "\n&\nSpi Factor is\n" + spi);
+                } else {
+                    textView.setText("Now the time is\n0" + x + " : 0" + y + " : 0" + sec + "\n&\nSpi Factor is\n" + spi);
+                }
+            }
+        }
         refresh();
     }
 

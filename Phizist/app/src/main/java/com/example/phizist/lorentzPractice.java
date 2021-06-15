@@ -31,8 +31,8 @@ public class lorentzPractice extends AppCompatActivity {
             Toast.makeText(this,"Please Enter Velocity",Toast.LENGTH_SHORT).show();
             return;
         }
-        long vel= Long.parseLong(x);
-        long c = 3*100000000;
+        double vel= Double.parseDouble(x);
+        double c = 3*100000000;
         TextView textView = findViewById(R.id.result);
         if(vel >= c ){
             textView.setVisibility(View.INVISIBLE);
@@ -45,27 +45,7 @@ public class lorentzPractice extends AppCompatActivity {
             div = Math.sqrt(div);
             div = 1/div;
             textView.setText("Lorentz Factor for given input is:" + div);
-            EditText ans = findViewById(R.id.answer);
-            String y = ans.getText().toString();
-            if(y.isEmpty()){
-                textView.setVisibility(View.VISIBLE);
-            }
-            else{
-                x = Double.toString(div);
-
-                ConstraintLayout layout = findViewById(R.id.lorentz);
-                if(x.compareTo(y)==0){
-                    layout.setBackgroundColor(Color.GREEN);
-                }
-                else{
-                    layout.setBackgroundColor(Color.RED);
-                    Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        vibrator.vibrate(VibrationEffect.createOneShot(500,VibrationEffect.DEFAULT_AMPLITUDE));
-                    }
-                    textView.setVisibility(View.VISIBLE);
-                }
-            }
+            textView.setVisibility(View.VISIBLE);
         }
     }
 }

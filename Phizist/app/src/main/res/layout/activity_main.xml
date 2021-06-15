@@ -10,7 +10,7 @@
     <Button
         android:id="@+id/lfactor"
         android:layout_width="175dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:text="lorentz factor"
         android:fontFamily="@font/cairo_bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +22,7 @@
     <Button
         android:id="@+id/sfactor"
         android:layout_width="175dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:text="spi factor"
         android:fontFamily="@font/cairo_bold"
         app:layout_constraintBottom_toBottomOf="parent"
